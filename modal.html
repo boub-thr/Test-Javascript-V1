@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style in the pup up</title>
+
+    <!-- the style  -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .popup-wrapper{
+            background-color: rgba(0, 0, 0, 0.6);
+            /* set wrapper height and width so he take the view height and width*/
+            /* this why we can center the popup */
+            width: 100vw;
+            height: 100vh;
+            /*center the popup using flexBox*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup{
+            background-color: white;
+            /* set the padding to 15px*/
+            padding: 15px;
+            /* set the border to 4px*/
+            border:crimson solid 4px;
+            /*take 35% of available view width*/
+            width: 35vw;
+            /*take 35% of available view width*/
+            min-width: 400px;
+            /*include the padding and the border in the with */
+            box-sizing: border-box;
+        }
+        /*if the screen is smaller than 400px horizontally,
+         the modal should now take 100% of the viewport width.*/
+        @media (max-width: 400px) {
+            .popup{
+            min-width: 100vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup-wrapper">
+        <div class="popup">
+            <h1> welcome! </h1>
+        </div>
+        
+    </div>
+
+
+   </body>
+
+</html>
